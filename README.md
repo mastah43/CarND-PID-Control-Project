@@ -3,6 +3,38 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+My solution for the PID controller project is a simple application of a PD controller
+for the steering angle using a fixed throttle (of 0.3). The PD coefficients were 
+manually tuned.
+
+## Chosing final P, I and D coefficients and their effect.
+
+### P coefficient
+I chose P to be 0.1 since I realized that a magnitue CTE of 5 means the vehicle is just off 
+track. 0.1*5=0.5 which i considered the maximum (safe) steering value magnitude I wanted to 
+have. 
+
+### D coefficient
+I chose 0.5 to prevent overshooting and oscillation by manual tuning and experiments.
+A high value (3 and 5) lead to emphasized overshooting. 
+
+### I coefficient
+I realized that the integral error (I error) always increases over time which is due 
+to the fact that the vehicle drives on a (left oriented) circuit. Since there are more
+left curves and the vehicle is always off to the right in those curves,
+the CTE is always positive in average. Thus I chose to set I coefficient to exactly 0
+otherwise I would have a changing steering behaviour the longer the vehicle drives
+around the track. 
+
+## Potential future work
+The solution could be extended by using a PID controller for the throttle in order
+to dramatically slow down in sharp curves allowing for slight turns in those curves
+while having a high velocity on the straight or very slightly curved sections.
+Probably automated fiddling is to be used to find the appropriate combinations
+of PD coefficients for steering and throttle in combination. I would accept any
+occurance of a CTE magnitude < 4.5 since this means the vehicle is still on track
+in order to find coefficients that keep the vehicle on track in curves. 
+
 ## Dependencies
 
 * cmake >= 3.5

@@ -1,0 +1,125 @@
+twiddling for
+    throttle: 0.3
+    start P: 0.13
+    start I: 0
+    start D: 0.5
+with
+    steps init: 100
+    steps evaluate: 2000
+
+twiddle 0 improvement: P=0.13; I=0; D=0.5; error=1416.59; best_error=1.79769e+308
+twiddle 1 improvement: P=0.13; I=0; D=0.55; error=1265.81; best_error=1416.59
+twiddle 2 no improvement: P=0.1443; I=0; D=0.55; error=1285.63; best_error=1265.81
+twiddle 3 no improvement: P=0.1157; I=0; D=0.55; error=1442.08; best_error=1265.81
+twiddle 4 improvement: P=0.13; I=0; D=0.605; error=1244.77; best_error=1265.81
+twiddle 5 no improvement: P=0.14287; I=0; D=0.605; error=1245.28; best_error=1244.77
+twiddle 6 no improvement: P=0.11713; I=0; D=0.605; error=1355.46; best_error=1244.77
+twiddle 7 improvement: P=0.13; I=0; D=0.6655; error=1203.02; best_error=1244.77
+twiddle 8 improvement: P=0.141583; I=0; D=0.6655; error=1170.52; best_error=1203.02
+twiddle 9 no improvement: P=0.141583; I=0; D=0.73205; error=1179.54; best_error=1170.52
+twiddle 10 no improvement: P=0.141583; I=0; D=0.59895; error=1245.4; best_error=1170.52
+twiddle 11 improvement: P=0.154324; I=0; D=0.6655; error=1140.86; best_error=1170.52
+twiddle 12 improvement: P=0.154324; I=0; D=0.725395; error=1103.77; best_error=1140.86
+twiddle 13 no improvement: P=0.16834; I=0; D=0.725395; error=1163.73; best_error=1103.77
+twiddle 14 no improvement: P=0.140309; I=0; D=0.725395; error=1174.42; best_error=1103.77
+twiddle 15 improvement: P=0.154324; I=0; D=0.79128; error=1042.17; best_error=1103.77
+twiddle 16 improvement: P=0.166938; I=0; D=0.79128; error=1041.75; best_error=1042.17
+twiddle 17 improvement: P=0.166938; I=0; D=0.863752; error=994.042; best_error=1041.75
+twiddle 18 no improvement: P=0.180813; I=0; D=0.863752; error=999.804; best_error=994.042
+twiddle 19 no improvement: P=0.153063; I=0; D=0.863752; error=1019.74; best_error=994.042
+twiddle 20 improvement: P=0.166938; I=0; D=0.943473; error=940.896; best_error=994.042
+twiddle 21 no improvement: P=0.179426; I=0; D=0.943473; error=1013.12; best_error=940.896
+twiddle 22 no improvement: P=0.15445; I=0; D=0.943473; error=990.405; best_error=940.896
+twiddle 23 no improvement: P=0.166938; I=0; D=1.03116; error=974.778; best_error=940.896
+twiddle 24 no improvement: P=0.166938; I=0; D=0.85578; error=977.441; best_error=940.896
+twiddle 25 no improvement: P=0.178177; I=0; D=0.943473; error=965.614; best_error=940.896
+twiddle 26 no improvement: P=0.155699; I=0; D=0.943473; error=1034.29; best_error=940.896
+twiddle 27 no improvement: P=0.166938; I=0; D=1.0224; error=1062.11; best_error=940.896
+twiddle 28 no improvement: P=0.166938; I=0; D=0.86455; error=1017.27; best_error=940.896
+twiddle 29 no improvement: P=0.177053; I=0; D=0.943473; error=976.907; best_error=940.896
+twiddle 30 no improvement: P=0.156823; I=0; D=0.943473; error=1026.2; best_error=940.896
+twiddle 31 no improvement: P=0.166938; I=0; D=1.0145; error=979.324; best_error=940.896
+twiddle 32 no improvement: P=0.166938; I=0; D=0.872442; error=1010.26; best_error=940.896
+twiddle 33 no improvement: P=0.176042; I=0; D=0.943473; error=1028.77; best_error=940.896
+twiddle 34 no improvement: P=0.157835; I=0; D=0.943473; error=1081.25; best_error=940.896
+twiddle 35 no improvement: P=0.166938; I=0; D=1.0074; error=1017.19; best_error=940.896
+twiddle 36 no improvement: P=0.166938; I=0; D=0.879545; error=1015.75; best_error=940.896
+twiddle 37 no improvement: P=0.175131; I=0; D=0.943473; error=1098.69; best_error=940.896
+twiddle 38 no improvement: P=0.158745; I=0; D=0.943473; error=1048.97; best_error=940.896
+twiddle 39 no improvement: P=0.166938; I=0; D=1.00101; error=1085.07; best_error=940.896
+twiddle 40 no improvement: P=0.166938; I=0; D=0.885938; error=1042.29; best_error=940.896
+twiddle 41 no improvement: P=0.174312; I=0; D=0.943473; error=1053.1; best_error=940.896
+twiddle 42 no improvement: P=0.159564; I=0; D=0.943473; error=1064.56; best_error=940.896
+twiddle 43 no improvement: P=0.166938; I=0; D=0.995254; error=1082.94; best_error=940.896
+twiddle 44 no improvement: P=0.166938; I=0; D=0.891691; error=1011.29; best_error=940.896
+twiddle 45 no improvement: P=0.173575; I=0; D=0.943473; error=1008.47; best_error=940.896
+twiddle 46 no improvement: P=0.160302; I=0; D=0.943473; error=1055.7; best_error=940.896
+twiddle 47 no improvement: P=0.166938; I=0; D=0.990076; error=1074.77; best_error=940.896
+twiddle 48 no improvement: P=0.166938; I=0; D=0.896869; error=1059.53; best_error=940.896
+twiddle 49 no improvement: P=0.172911; I=0; D=0.943473; error=1032.37; best_error=940.896
+twiddle 50 no improvement: P=0.160965; I=0; D=0.943473; error=1065.07; best_error=940.896
+twiddle 51 no improvement: P=0.166938; I=0; D=0.985416; error=1046.55; best_error=940.896
+twiddle 52 no improvement: P=0.166938; I=0; D=0.90153; error=1061.49; best_error=940.896
+twiddle 53 no improvement: P=0.172314; I=0; D=0.943473; error=1061.55; best_error=940.896
+twiddle 54 no improvement: P=0.161563; I=0; D=0.943473; error=1041.51; best_error=940.896
+twiddle 55 no improvement: P=0.166938; I=0; D=0.981221; error=1035.86; best_error=940.896
+twiddle 56 no improvement: P=0.166938; I=0; D=0.905724; error=1058.33; best_error=940.896
+twiddle 57 no improvement: P=0.171776; I=0; D=0.943473; error=1134.05; best_error=940.896
+twiddle 58 no improvement: P=0.1621; I=0; D=0.943473; error=1096.87; best_error=940.896
+twiddle 59 no improvement: P=0.166938; I=0; D=0.977446; error=1123.21; best_error=940.896
+twiddle 60 no improvement: P=0.166938; I=0; D=0.909499; error=1074.22; best_error=940.896
+twiddle 61 no improvement: P=0.171292; I=0; D=0.943473; error=1072.06; best_error=940.896
+twiddle 62 no improvement: P=0.162584; I=0; D=0.943473; error=1135.66; best_error=940.896
+twiddle 63 no improvement: P=0.166938; I=0; D=0.974049; error=1110.94; best_error=940.896
+twiddle 64 no improvement: P=0.166938; I=0; D=0.912896; error=1110.59; best_error=940.896
+twiddle 65 no improvement: P=0.170857; I=0; D=0.943473; error=1101.7; best_error=940.896
+twiddle 66 no improvement: P=0.163019; I=0; D=0.943473; error=1091.97; best_error=940.896
+twiddle 67 no improvement: P=0.166938; I=0; D=0.970991; error=1090.1; best_error=940.896
+twiddle 68 no improvement: P=0.166938; I=0; D=0.915954; error=1078.49; best_error=940.896
+twiddle 69 no improvement: P=0.170465; I=0; D=0.943473; error=1065.66; best_error=940.896
+twiddle 70 no improvement: P=0.163411; I=0; D=0.943473; error=1049.39; best_error=940.896
+twiddle 71 no improvement: P=0.166938; I=0; D=0.96824; error=1079.98; best_error=940.896
+twiddle 72 no improvement: P=0.166938; I=0; D=0.918706; error=1066.46; best_error=940.896
+twiddle 73 no improvement: P=0.170112; I=0; D=0.943473; error=1075.45; best_error=940.896
+twiddle 74 no improvement: P=0.163764; I=0; D=0.943473; error=1048.85; best_error=940.896
+twiddle 75 no improvement: P=0.166938; I=0; D=0.965763; error=1065.14; best_error=940.896
+twiddle 76 no improvement: P=0.166938; I=0; D=0.921182; error=1045.16; best_error=940.896
+twiddle 77 no improvement: P=0.169795; I=0; D=0.943473; error=1066.38; best_error=940.896
+twiddle 78 no improvement: P=0.164081; I=0; D=0.943473; error=1056; best_error=940.896
+twiddle 79 no improvement: P=0.166938; I=0; D=0.963534; error=1056.8; best_error=940.896
+twiddle 80 no improvement: P=0.166938; I=0; D=0.923412; error=1045.04; best_error=940.896
+twiddle 81 no improvement: P=0.169509; I=0; D=0.943473; error=1034.21; best_error=940.896
+twiddle 82 no improvement: P=0.164367; I=0; D=0.943473; error=1055.32; best_error=940.896
+twiddle 83 no improvement: P=0.166938; I=0; D=0.961528; error=1055.24; best_error=940.896
+twiddle 84 no improvement: P=0.166938; I=0; D=0.925418; error=1053.92; best_error=940.896
+twiddle 85 no improvement: P=0.169252; I=0; D=0.943473; error=1053; best_error=940.896
+twiddle 86 no improvement: P=0.164624; I=0; D=0.943473; error=1072.8; best_error=940.896
+twiddle 87 no improvement: P=0.166938; I=0; D=0.959722; error=1081.73; best_error=940.896
+twiddle 88 no improvement: P=0.166938; I=0; D=0.927223; error=1066.07; best_error=940.896
+twiddle 89 no improvement: P=0.169021; I=0; D=0.943473; error=1085.32; best_error=940.896
+twiddle 90 no improvement: P=0.164856; I=0; D=0.943473; error=1097.22; best_error=940.896
+twiddle 91 no improvement: P=0.166938; I=0; D=0.958097; error=1087.92; best_error=940.896
+twiddle 92 no improvement: P=0.166938; I=0; D=0.928848; error=1104.79; best_error=940.896
+twiddle 93 no improvement: P=0.168813; I=0; D=0.943473; error=1088.07; best_error=940.896
+twiddle 94 no improvement: P=0.165064; I=0; D=0.943473; error=1137.24; best_error=940.896
+twiddle 95 no improvement: P=0.166938; I=0; D=0.956635; error=1074.93; best_error=940.896
+twiddle 96 no improvement: P=0.166938; I=0; D=0.930311; error=1089.33; best_error=940.896
+twiddle 97 no improvement: P=0.168625; I=0; D=0.943473; error=1092.11; best_error=940.896
+twiddle 98 no improvement: P=0.165251; I=0; D=0.943473; error=1159.95; best_error=940.896
+twiddle 99 no improvement: P=0.166938; I=0; D=0.955319; error=1114.41; best_error=940.896
+twiddle 100 no improvement: P=0.166938; I=0; D=0.931627; error=1093.41; best_error=940.896
+twiddle 101 no improvement: P=0.168456; I=0; D=0.943473; error=1108.12; best_error=940.896
+twiddle 102 no improvement: P=0.16542; I=0; D=0.943473; error=1079.38; best_error=940.896
+twiddle 103 no improvement: P=0.166938; I=0; D=0.954134; error=1150.4; best_error=940.896
+twiddle 104 no improvement: P=0.166938; I=0; D=0.932811; error=1058.4; best_error=940.896
+twiddle 105 no improvement: P=0.168305; I=0; D=0.943473; error=1081.17; best_error=940.896
+twiddle 106 no improvement: P=0.165572; I=0; D=0.943473; error=1074.61; best_error=940.896
+twiddle 107 no improvement: P=0.166938; I=0; D=0.953068; error=1111.73; best_error=940.896
+twiddle 108 no improvement: P=0.166938; I=0; D=0.933877; error=1098.37; best_error=940.896
+twiddle 109 no improvement: P=0.168168; I=0; D=0.943473; error=1073.34; best_error=940.896
+twiddle 110 no improvement: P=0.165708; I=0; D=0.943473; error=1089.57; best_error=940.896
+twiddle 111 no improvement: P=0.166938; I=0; D=0.952108; error=1104.29; best_error=940.896
+twiddle 112 no improvement: P=0.166938; I=0; D=0.934837; error=1099.26; best_error=940.896
+twiddle 113 no improvement: P=0.168045; I=0; D=0.943473; error=1077.47; best_error=940.896
+
+Process finished with exit code 139 (interrupted by signal 11: SIGSEGV)

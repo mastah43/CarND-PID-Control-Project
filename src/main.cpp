@@ -37,10 +37,18 @@ int main() {
     PID pid_steering;
 
     // a fabs(CTE) > 5 is considered off track and should lead to a fabs(steering_value) = 0.5 for safety reasons
-    //pid_steering.Init(0.1, 0, 3); // v=0.7; makes it around the track with oscillation
-    //pid_steering.Init(0.1, 0, 5); // v=0.7 even better
-    //pid_steering.Init(0.05, 0, 0.5); // v=0.7 oscillation gone, but in sharp curves too close to lane boundaries
-    pid_steering.Init(0.1, 0, 0.5); // v=0.7 oscillation gone, but in sharp curves too close to lane boundaries
+    //pid_steering.Init(0.1, 0, 3); // v=0.3; makes it around the track with oscillation
+    //pid_steering.Init(0.1, 0, 5); // v=0.3 even better
+    //pid_steering.Init(0.05, 0, 0.5); // v=0.3 oscillation gone, but in sharp curves too close to lane boundaries
+    //pid_steering.Init(0.1, 0, 0.5); // v=0.3 oscillation gone, but in sharp curves too close to lane boundaries
+    //pid_steering.Init(0.2, 0, 0.8); // v=0.3 too much oscillation
+    //pid_steering.Init(0.2, 0, 0.5); // v=0.3 too much oscillation
+    //pid_steering.Init(0.12, 0, 0.5); // v=0.3 some oscillation and too narrow to edge in sharp left curve after bridge
+    //pid_steering.Init(0.13, 0, 0.5); // v=0.3 some oscillation and too narrow to edge in sharp left curve after bridge
+    //pid_steering.Init(0.13, 0, 0.7); // v=0.3 some oscillation and too narrow to edge in sharp left curve after bridge
+    //pid_steering.Init(0.13, 0, 0.6); // v=0.3 some oscillation and too narrow to edge in sharp left curve after bridge
+    //pid_steering.Init(0.13, 0, 0.65); // v=0.3 some oscillation and too narrow to edge in sharp left curve after bridge
+    pid_steering.Init(0.166938, 0, 0.943473); // v=0.3 from auto fiddling, some oscillation but ok on track
 
     h.onMessage([&pid_steering](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
         // "42" at the start of the message means there's a websocket message event.
@@ -69,11 +77,11 @@ int main() {
                     /*
                     // DEBUG
                     std::cout << "pid values for steering: " << std::endl;
-                    std::cout << "P err: " << pid_steering.p_error << std::endl;
-                    std::cout << "D err: " << pid_steering.d_error << std::endl;
-                    std::cout << "I err: " << pid_steering.i_error << std::endl;
+                    std::cout << "P: " << -pid_steering.Kp*pid_steering.p_error << std::endl;
+                    std::cout << "D: " << -pid_steering.Kd*pid_steering.d_error << std::endl;
+                    std::cout << "I: " << -pid_steering.Ki*pid_steering.i_error << std::endl;
                     std::cout << "cte=" << cte << "; steering=" << steering << std::endl << std::endl;
-                    */
+                     */
 
                     json msgJson;
                     msgJson["steering_angle"] = steering;

@@ -7,33 +7,71 @@ My solution for the PID controller project is a simple application of a PD contr
 for the steering angle using a fixed throttle (of 0.3). The PD coefficients were 
 manually tuned.
 
-## Chosing final P, I and D coefficients and their effect.
+## Discussion of P, I and D effects
 
-### P coefficient
-I chose P to be 0.1 since I realized that a magnitue CTE of 5 means the vehicle is just off 
-track. 0.1*5=0.5 which i considered the maximum (safe) steering value magnitude I wanted to 
-have. 
+## P effect
+The P coefficient is a factor on how strong the current track error affects the steering.
+This parameter has the strongest direct effect on steering. A high value helps to react
+fast in curves but also requires counter measurements via D parameter in order to prevent
+massive overshooting.
 
-### D coefficient
-I chose 0.5 to prevent overshooting and oscillation by manual tuning and experiments.
-A high value (3 and 5) lead to emphasized overshooting. 
-
-### I coefficient
+## I effect
+The I coefficient is a factor on how strong the incremental error over the entire drive
+affects the steering. This could help to correct systemic deviations in steering 
+e.g. a vehicle that slightly drives to th left although steering angle 0 is used.
 I realized that the integral error (I error) always increases over time which is due 
 to the fact that the vehicle drives on a (left oriented) circuit. Since there are more
 left curves and the vehicle is always off to the right in those curves,
 the CTE is always positive in average. Thus I chose to set I coefficient to exactly 0
 otherwise I would have a changing steering behaviour the longer the vehicle drives
-around the track. 
+around the track.
+
+## D effect
+The D coefficient is a factor on how strong the delta error between last time stamp
+and current time stamp affects the steering. This can help to prevent overshooting 
+of the steering.
+
+## Choosing final P, I and D coefficients and their effect.
+
+I chose to use a constent throttle of 0.3 and based my PID parameter tuning on that.
+I first manually tried out different combinations of P and D combinations based 
+on my growing understanding of the P, I and D error as well as the coefficient effects 
+(see below). 
+Then I used automatic twiddling to find more fitting parameters while using
+the manually found coefficients as start state.
+
+### Manual selection of coefficients 
+
+#### P coefficient
+I initially chose P to be 0.1 since I realized that a magnitue CTE of 5 means the vehicle is just off 
+track. 0.1*5=0.5 which i considered the maximum (safe) steering value magnitude I wanted to 
+have. I manually tuned this to 1.3.
+
+#### D coefficient
+I chose 0.5 to prevent overshooting and oscillation by manual tuning and experiments.
+A high value (3 and 5) lead to emphasized overshooting. 
+
+#### I coefficient
+Set to 0 (see discussion of I above).
+
+### Automatic twiddling
+I used automatic twiddling to find the final coefficients:
+* P: 0.166938
+* I: 0
+* D: 0.943473  
+With this the vehicle does not pop up on ledges even in sharp curves. 
+It has a fast reaction to cross track error and also some oscillation.
+[Here](twiddle_results.txt) is the log auto twiddle steps and results.
 
 ## Potential future work
 The solution could be extended by using a PID controller for the throttle in order
 to dramatically slow down in sharp curves allowing for slight turns in those curves
 while having a high velocity on the straight or very slightly curved sections.
-Probably automated fiddling is to be used to find the appropriate combinations
-of PD coefficients for steering and throttle in combination. I would accept any
-occurance of a CTE magnitude < 4.5 since this means the vehicle is still on track
-in order to find coefficients that keep the vehicle on track in curves. 
+This could help to reduce the lateral oscillation while also improving the performance
+in curves by beeing more in the center of the lane. But when using automatic 
+fiddling of PID for throttle and steering, a slow down should be punished 
+in addition to cross track error in order to prevent that coefficients are chosen
+that lead to slow driving. 
 
 ## Dependencies
 
